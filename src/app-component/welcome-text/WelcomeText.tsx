@@ -1,7 +1,7 @@
 import { ReactNode } from "react";
 
 const WelcomeText = ({ children }: { children: ReactNode }) => {
-  return <>{children}</>;
+  return <div className="">{children}</div>;
 };
 
 export default WelcomeText;

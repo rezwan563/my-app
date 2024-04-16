@@ -3,7 +3,7 @@ import WelcomeText from "./app-component/welcome-text/WelcomeText";
 const App = () => {
   return (
     <div>
-     <WelcomeText>Hello World</WelcomeText>
+     <WelcomeText>Hello Universe</WelcomeText>
     </div>
   );
 };
