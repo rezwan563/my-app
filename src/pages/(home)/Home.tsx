@@ -1,14 +1,32 @@
 const Home = () => {
 
     
-    const handleGuestInfo = (e) =>{
+    const handleGuestInfo = async(e) =>{
         e.preventDefault();
 
         const form = e.target;
         const formData = new FormData(form);
+        const plainData = {};
         for(const [key, value] of formData) {
-            console.log(`${key} : ${value}`);
+            plainData[key] = value;
         }
+        console.log('data\n', plainData);
+        try {
+            const response = await fetch('http://localhost:3000/', {
+                method: "POST",
+                headers:{
+                    "Content-type": 'application/json'
+                },
+                body: JSON.stringify(plainData)
+            });
+            if(response.ok){
+                const result = await response.json();
+                console.log('result\n', result);
+            }
+        } catch (error) {
+            console.log(error)
+        }
+
     }
     return (
         <div>
