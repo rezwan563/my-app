@@ -1,9 +1,8 @@
 const Home = () => {
-    console.log(import.meta.env);
-  const handleGuestInfo = async (e) => {
-    e.preventDefault();
+  const handleGuestInfo = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault() ;
 
-    const form = e.target;
+    const form = e.target as HTMLFormElement;
     const formData = new FormData(form);
     const plainData = {};
     for (const [key, value] of formData) {
