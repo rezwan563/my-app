@@ -12,10 +12,10 @@ const Home = () => {
     try {
       const response = await fetch(`${import.meta.env.VITE_PUBLIC_API}/url`, {
         method: "POST",
-        // headers: {
-        //   "Content-type": "application/json",
-        // },
-        body: formData
+        headers: {
+          "Content-type": "application/json",
+        },
+        body: JSON.stringify(plainData),
       });
       if (response.ok) {
         const result = await response.json();
@@ -59,13 +59,16 @@ const Home = () => {
             className="pl-2"
           />
         </div>
-        <input type="file" name="text" id="" />
+        {/* <input type="file" name="text" id="" /> */}
         <input
           type="submit"
           value="Confirm"
           className="bg-blue-600 block mt-2 text-white px-3 shadow-md"
         />
       </form>
+      <a href="/page-1" className="text-blue-700 mr-2">
+        Page 1
+      </a>
     </div>
   );
 };
