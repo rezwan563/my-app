@@ -66,7 +66,7 @@ const Home = () => {
           className="bg-blue-600 block mt-2 text-white px-3 shadow-md"
         />
       </form>
-      <a href="/page-1" className="text-blue-700 mr-2">
+      <a href="/page-one" className="text-blue-700 mr-2">
         Page 1
       </a>
     </div>
