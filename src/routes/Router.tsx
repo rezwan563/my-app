@@ -1,6 +1,6 @@
 import { createBrowserRouter } from "react-router-dom";
 import Home from "../pages/(home)/Home";
-import PageOne from "../pages/page-1/PageOne";
+import PageOne from "../pages/page1/PageOne";
 
 export const router = createBrowserRouter([
   {
