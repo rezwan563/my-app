@@ -1,20 +1,25 @@
+
 const Login = () => {
   const handleLoginForm = async (e: React.SyntheticEvent) => {
     e.preventDefault();
     const formData = new FormData(e.target as HTMLFormElement);
+    const singinCredential = {}
     for (const [key, value] of formData) {
-      console.log(`${key} : ${value}`);
+      singinCredential[key] = value
     }
     const response = await fetch(
-      `${import.meta.env.VITE_PUBLIC_API}/api/login`,
+      `${import.meta.env.VITE_PUBLIC_API}/api/user/signin`,
       {
         method: "POST",
         headers: {
           "Content-type": "application/json",
         },
+        body: JSON.stringify(singinCredential)
       }
+      
     );
-    return response.json();
+    const result = await response.json()
+    console.log(result)
   };
 
   const handleSignup = async (e: React.SyntheticEvent) => {
@@ -22,11 +27,8 @@ const Login = () => {
     const formData = new FormData(e.target as HTMLFormElement);
     const signupCredential = {};
     for (const [key, value] of formData) {
-      console.log(`${key} : ${value}`);
       signupCredential[key] = value
-      // formData.append(key, value);
     }
-    console.log(signupCredential)
     const response = await fetch(
       `${import.meta.env.VITE_PUBLIC_API}/api/user/signup`,
       {
