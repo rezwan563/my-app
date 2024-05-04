@@ -1,0 +1,12 @@
+.box{
+    display: grid;
+    grid-template-columns: 80px auto;
+}
+
+.sidebar{
+    background-color: bisque;
+}
+
+.content{
+    background-color: chocolate;
+}
