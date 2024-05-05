@@ -2,9 +2,9 @@ import './AppLayout.css'
 
 const AppLayout = () => {
   return (
-    <div className='box'>
-        <p className='sidebar'>left side</p>
-        <p className='content'>right side</p>
+    <div className='dashboard'>
+        <div className='sidebar'>Dashboard Sidebar</div>
+        <div className='content'><p>Dashboard Content</p></div>
     </div>
   );
 };
