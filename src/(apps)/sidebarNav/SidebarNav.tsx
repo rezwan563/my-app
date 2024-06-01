@@ -39,22 +39,41 @@ const sidebarItems = [
 
 const SidebarNav = () => {
   return (
-    <ul>
-      {sidebarItems.map((item, index) => (
-        <li key={item.id}>
-          <a href={item.route}>{item.label}</a>
+    // <ul>
+    //   {sidebarItems.map((item, index) => (
+    //     <li key={item.id}>
+    //       <a href={item.route}>{item.label}</a>
 
-          {sidebarItems[index].subroute.length > 1 ? (
-            <ul>
-              {sidebarItems[index].subroute.map((sub) => (
-                <li key={sub.id} className="sub">
-                  <a href={sub.route}>{sub.label}</a>
-                </li>
-              ))}
-            </ul>
-          ) : (
-            ""
-          )}
+    //       {sidebarItems[index].subroute.length > 1 ? (
+    //         <ul>
+    //           {sidebarItems[index].subroute.map((sub) => (
+    //             <li key={sub.id} className="sub">
+    //               <a href={sub.route}>{sub.label}</a>
+    //             </li>
+    //           ))}
+    //         </ul>
+    //       ) : (
+    //         ""
+    //       )}
+    //     </li>
+    //   ))}
+    // </ul>
+    <ul className="sidebar">
+      {sidebarItems.map((item, index) => (
+        <li key={item.id} className="menu">{item.label}
+          {
+            sidebarItems[index].subroute.length > 1 && (
+              <ul>
+                {
+                  sidebarItems[index].subroute.map((sub) =>(
+                    <li key={sub.id} className="sub-menu">
+                      <a href={sub.route}>{sub.label}</a>
+                    </li>
+                  ))
+                }
+              </ul>
+            )
+          }
         </li>
       ))}
     </ul>
