@@ -1,35 +1,35 @@
 const Home = () => {
-  const handleGuestInfo = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
+  // const handleGuestInfo = async (e: React.FormEvent<HTMLFormElement>) => {
+  //   e.preventDefault();
 
-    const form = e.target as HTMLFormElement;
-    const formData = new FormData(form);
-    const plainData = {};
-    for (const [key, value] of formData) {
-      plainData[key] = value;
-    }
-    console.log("data\n", plainData);
-    try {
-      const response = await fetch(`${import.meta.env.VITE_PUBLIC_API}/url`, {
-        method: "POST",
-        headers: {
-          "Content-type": "application/json",
-        },
-        body: JSON.stringify(plainData),
-      });
-      if (response.ok) {
-        const result = await response.json();
-        console.log("result\n", result);
-      }
-    } catch (error) {
-      console.log(error);
-    }
-  };
+  //   const form = e.target as HTMLFormElement;
+  //   const formData = new FormData(form);
+  //   const plainData = {};
+  //   for (const [key, value] of formData) {
+  //     plainData[key] = value;
+  //   }
+  //   console.log("data\n", plainData);
+  //   try {
+  //     const response = await fetch(`${import.meta.env.VITE_PUBLIC_API}/url`, {
+  //       method: "POST",
+  //       headers: {
+  //         "Content-type": "application/json",
+  //       },
+  //       body: JSON.stringify(plainData),
+  //     });
+  //     if (response.ok) {
+  //       const result = await response.json();
+  //       console.log("result\n", result);
+  //     }
+  //   } catch (error) {
+  //     console.log(error);
+  //   }
+  // };
   return (
     <div>
       <form
         autoComplete="off"
-        onSubmit={handleGuestInfo}
+        // onSubmit={handleGuestInfo}
         className="bg-gray-300 w-1/2 p-2"
       >
         <div className="grid grid-cols-1 gap-2">
