@@ -1,8 +1,8 @@
 import { Outlet } from 'react-router-dom';
 import SidebarNav from '../sidebarNav/SidebarNav';
-import './AppLayout.css'
+import './DashboardLayout.css'
 
-const AppLayout = () => {
+const DashboardLayout = () => {
   return (
     <div className='dashboard'>
         <div className='sidebar'><SidebarNav/></div>
@@ -11,4 +11,4 @@ const AppLayout = () => {
   );
 };
 
-export default AppLayout;
+export default DashboardLayout;

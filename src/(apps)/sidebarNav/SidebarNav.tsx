@@ -7,24 +7,24 @@ const sidebarItems = [
     icon: "box",
     route: "/inventory/products",
   },
-  {
-    id: 2,
-    label: "Categories",
-    icon: "folder",
-    route: "/inventory/categories",
-  },
-  {
-    id: 3,
-    label: "Orders",
-    icon: "shopping-cart",
-    route: "/inventory/orders",
-  },
-  {
-    id: 4,
-    label: "Customers",
-    icon: "users",
-    route: "/inventory/customers",
-  },
+  // {
+  //   id: 2,
+  //   label: "Categories",
+  //   icon: "folder",
+  //   route: "/inventory/categories",
+  // },
+  // {
+  //   id: 3,
+  //   label: "Orders",
+  //   icon: "shopping-cart",
+  //   route: "/inventory/orders",
+  // },
+  // {
+  //   id: 4,
+  //   label: "Customers",
+  //   icon: "users",
+  //   route: "/inventory/customers",
+  // },
 
   // Add more sidebar items as needed
 ];
@@ -35,7 +35,7 @@ return(
     <ul className="">
   {
     sidebarItems.map(item => (
-      <li className="cursor-pointer py-5 hover:bg-slate-600 px-5">{item.label}</li>
+      <li className="cursor-pointer py-5 hover:bg-slate-600 hover:text-text-light px-5">{item.label}</li>
     ))
   }
   </ul>
